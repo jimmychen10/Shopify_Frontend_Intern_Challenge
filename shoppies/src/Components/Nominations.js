@@ -3,7 +3,7 @@ import NuminatedResult from "./Numinated/NuminatedResult.js"
 
 export default function Nominations(props) {
     
-    const nuaminatedMovies = props.numinations.map((n) => 
+    const nuaminatedMovies = props.nominations.map((n) => 
     
     {
         return(

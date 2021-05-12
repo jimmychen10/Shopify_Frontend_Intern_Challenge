@@ -8,23 +8,22 @@ import SearchIcon from '@material-ui/icons/Search';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import "./CSS/SearchSection.scss"
 
-export default function SearchSection(input) {
+export default function SearchSection(props) {
 
 
   return (
-    <div >
-      
+    <div className = "searchSection">
 
-      <div>
-          
-            <TextField
+      <form  onSubmit = {(e)=>props.input(e)}>
+        <TextField
+             
               className = "searchBar"
               label="Movie"
               placeholder="Enter movie title"
-              // helperText="Full width!"
     
               margin="normal"
-              value = {input}
+              value = {props.movie}
+              onChange ={e =>props.changeMovie(e)}
 
               InputLabelProps={{
                 shrink: true,
@@ -36,14 +35,14 @@ export default function SearchSection(input) {
                     <SearchIcon />
                   </IconButton>
                 </InputAdornment>
-                )
+                ),
+
               }}
               variant="outlined"
               
             />
+            </form>
 
-            
-      </div>
     </div>
   );
 }

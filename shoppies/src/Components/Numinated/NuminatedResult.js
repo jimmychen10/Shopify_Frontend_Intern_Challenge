@@ -7,11 +7,7 @@ export default function numinatedResult(props) {
         <div className= "individulItem">
             <p>Title: {props.movie.Title}</p>
             <p>({props.movie.Year})</p>
-            {
-                !props.movie.numinate ?  <Button variant="outlined" onClick={()=>props.handleRemove} >Nominate</Button> :<Button variant="outlined"  disabled>Nominate</Button>
-            }
-            
-            
+            <Button variant="outlined" onClick={()=>props.removeClick(props.movie.Title)} >Remove</Button> 
         </div>
     )
 }
